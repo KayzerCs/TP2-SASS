@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  background: url(../img/bg-slider-06.jpg) center/cover;
+  background: url(/assets/img/bg-slider-06.jpg) center/cover;
   padding: 0 50px;
   color: #eee;
 }
@@ -153,6 +153,7 @@ header .header-text div h6 {
   margin: 15px;
   padding: 30px 15px;
   border: 1px dashed rgb(166, 114, 69);
+  /* **** Va chercher la 2ème image de ce type **************************************** */
 }
 .section1 .intro-text h2 {
   color: rgb(166, 114, 69);
@@ -181,7 +182,7 @@ header .header-text div h6 {
   font-size: 0.7rem;
 }
 .section1 .intro-pic {
-  background: url(../img/store-01.jpg) center/cover;
+  background: url(/assets/img/store-01.jpg) center/cover;
 }
 @media screen and (max-width: 680px) {
   .section1 .intro-pic {
@@ -199,8 +200,8 @@ header .header-text div h6 {
   position: absolute;
   height: 620px;
   width: 100%;
-  background: url(../img/bg-menu-01.jpg) center/cover;
   left: 50%;
+  background: url(/assets/img/bg-menu-01.jpg) center/cover;
   bottom: -330px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -240,12 +241,13 @@ header .header-text div h6 {
   background: #eee;
   color: #21201e;
   width: 85%;
-  max-width: 800px;
   margin: 0 auto;
+  max-width: 800px;
   border-top: 4px solid rgb(166, 114, 69);
   padding: 15px 0;
   display: grid;
   grid-template-columns: 50% 50%;
+  /* **** Pour choisir sur quel couche sa va s'afficher [z-index:...], et si sa fonctionne pas mettre en position relative ****** */
   z-index: 1000;
   position: relative;
 }
@@ -254,14 +256,15 @@ header .header-text div h6 {
     grid-template-columns: 1fr;
   }
 }
-.section2 .meals .meal {
+.section2 .meal {
   display: grid;
   grid-template-columns: 25% 60% 15%;
-  border-bottom: 1px dashed rgb(182, 182, 182);
+  border-top: 1px dashed rgb(182, 182, 182);
   padding: 30px 0;
   margin: 0 20px;
+  /* **************** Pour selectionner son enfant direct [>] ( En l'occurence [p] est l'enfant de [.meal] )********************** */
 }
-.section2 .meals .meal img {
+.section2 .meal img {
   border-radius: 50px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -269,7 +272,7 @@ header .header-text div h6 {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.section2 .meals .meal .meal-text {
+.section2 .meal .meal-text {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,14 +287,14 @@ header .header-text div h6 {
   margin: 0 10px;
   height: 100%;
 }
-.section2 .meals .meal .meal-text h3 {
+.section2 .meal .meal-text h3 {
   text-transform: uppercase;
   color: #21201e;
   font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.section2 .meals .meal > p {
+.section2 .meal > p {
   color: rgb(166, 114, 69);
   font-weight: 600;
   font-size: 1.1rem;
@@ -324,7 +327,7 @@ header .header-text div h6 {
 }
 .section3 .form-content .hours .hours-content {
   border: 1px dashed rgb(182, 182, 182);
-  padding: 20px 0;
+  padding: 20px;
 }
 .section3 .form-content .hours .hours-content h3 {
   font-family: Allura, cursive;
@@ -384,6 +387,7 @@ header .header-text div h6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
+  /* ***** Je selection tout t'es enfants avec le all [*] *********************************** */
 }
 @media screen and (max-width: 680px) {
   .section3 .form-content .form-infos .form-inputs {
@@ -411,8 +415,8 @@ header .header-text div h6 {
   transition: 0.2s;
 }
 .section3 .form-content .form-infos button:hover {
-  -webkit-transform: translateX(3px);
-          transform: translateX(3px);
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.433);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.433);
 }
@@ -448,7 +452,7 @@ header .header-text div h6 {
 }
 .section4 .events-container .event-grid {
   display: grid;
-  grid-template-columns: 58% 42%;
+  grid-template-columns: 58% 48%;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "a b" "c b";
   gap: 20px;
@@ -529,17 +533,17 @@ header .header-text div h6 {
   grid-area: a;
 }
 .section4 .events-container .event-grid .event-1 .date {
-  background: url(../img/event-01.jpg) center/cover;
+  background: url(/assets/img/event-01.jpg) center/cover;
 }
 .section4 .events-container .event-grid .event-2 {
   grid-area: c;
 }
 .section4 .events-container .event-grid .event-2 .date {
-  background: url(../img/event-02.jpg) center/cover;
+  background: url(/assets/img/event-02.jpg) center/cover;
 }
 .section4 .events-container .event-grid .event-3 {
   grid-area: b;
-  background: url(../img/event-03.jpg) center/cover;
+  background: url(/assets/img/event-03.jpg) center/cover;
   padding: 25px;
 }
 .section4 .events-container .event-grid .event-3 .address {
@@ -547,7 +551,7 @@ header .header-text div h6 {
   padding: 0 12px;
 }
 .section4 .events-container .event-grid .event-3 .address h3 {
-  margin: 40px 0 15px;
+  margin: 40px 15px;
 }
 .section4 .events-container .event-grid .event-3 .address h5 {
   padding: 45px 0;
@@ -562,7 +566,7 @@ header .header-text div h6 {
   height: 350px;
   width: 100%;
   position: absolute;
-  background: url(../img/gmap.jpg) center/cover;
+  background: url(/assets/img/gmap.jpg) center/cover;
   left: 0;
   bottom: 0;
 }
@@ -580,14 +584,14 @@ header .header-text div h6 {
 .section5 .quote-container:before {
   content: "";
   position: absolute;
-  background: url(../img/avatar-02.jpg) center/cover;
+  background: url(/assets/img/avatar-02.jpg) center/cover;
   height: 60px;
   width: 60px;
   top: -30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-radius: 50px;
+  border-radius: 150px;
 }
 .section5 .quote-container .text-container {
   line-height: 30px;
@@ -611,7 +615,7 @@ header .header-text div h6 {
 }
 
 footer {
-  background: url(../img/bg-footer.jpg) center/cover;
+  background: url(/assets/img/bg-footer.jpg) center/cover;
   text-align: left;
   padding: 65px 32px;
   color: #eee;
